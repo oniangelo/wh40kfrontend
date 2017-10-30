@@ -10,7 +10,6 @@ export class ArmyPage {
   constructor(public navCtrl: NavController, private abService: ArmyBuilderService) {
     this.abService.getIndex(1).then(res => {
       var result = res.json();
-      debugger;
       result.forEach(element => {
         this.units.push(element);
       });

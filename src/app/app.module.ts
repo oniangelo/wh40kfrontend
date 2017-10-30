@@ -1,3 +1,4 @@
+import { NewListPage } from './../pages/newlist/newlist';
 import { ArmyPage } from './../pages/army/army';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -20,7 +21,8 @@ import {ArmyBuilderService} from '../armybuilderservice';
     MyApp,
     HomePage,
     ListPage,
-    ArmyPage
+    ArmyPage,
+    NewListPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import {ArmyBuilderService} from '../armybuilderservice';
     MyApp,
     HomePage,
     ListPage,
-    ArmyPage
+    ArmyPage,
+    NewListPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,33 @@
+<ion-content>
+    <ion-navbar>
+        <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        <ion-title>New List</ion-title>
+    </ion-navbar>
+    <ion-list>
+        <ion-list-header>
+            <span>HQ</span><button>+</button>
+        </ion-list-header>
+        <div *ngFor="let item of itemList">
+            <ion-item></ion-item>
+        </div>
+
+        <ion-list-header>
+            Troops
+        </ion-list-header>
+
+        <ion-list-header>
+            Elites
+        </ion-list-header>
+
+        <ion-list-header>
+            Flyer
+        </ion-list-header>
+
+        <ion-list-header>
+            Heavy Support
+        </ion-list-header>
+
+    </ion-list>
+</ion-content>

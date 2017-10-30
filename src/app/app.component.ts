@@ -1,3 +1,4 @@
+import { NewListPage } from './../pages/newlist/newlist';
 import { ArmyPage } from './../pages/army/army';
 import { ListPage } from './../pages/list/list';
 import { Component, ViewChild } from '@angular/core';
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Dark Angels', component: ListPage },
-      {title: 'DeathWatch', component: ArmyPage}
+      {title: 'DeathWatch', component: ArmyPage},
+      {title: 'New Army', component: NewListPage}
     ];
 
   }
