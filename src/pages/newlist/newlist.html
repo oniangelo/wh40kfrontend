@@ -3,11 +3,11 @@
         <button ion-button menuToggle>
               <ion-icon name="menu"></ion-icon>
             </button>
-        <ion-title>New List</ion-title>
+        <ion-title>Nuovo Esercito</ion-title>
     </ion-navbar>
     <ion-list>
         <ion-list-header>
-            <span>HQ</span><button>+</button>
+            <span>HQ</span><button color="light" (click)="addUnit(1);"><ion-icon name="add"></ion-icon></button>
         </ion-list-header>
         <div *ngFor="let item of itemList">
             <ion-item></ion-item>

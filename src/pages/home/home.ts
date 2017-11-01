@@ -1,6 +1,8 @@
+import { NewListPage } from './../newlist/newlist';
 import { FileSystem, FileReader, File } from '@ionic-native/file';
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
+
 
 //import {SQLite,SQLiteObject, SQLiteDatabaseConfig } from '@ionic-native/sqlite';
 
@@ -13,6 +15,9 @@ export class HomePage{
   constructor(public navCtrl: NavController, public alertController: AlertController) {
   
   }
+  newArmyList() {
+    this.navCtrl.push(NewListPage);
+  } 
 }
 // export class HomePage {
 //   constructor(public navCtrl: NavController,private sqlite: SQLite, public alertController: AlertController) {
