@@ -1,3 +1,4 @@
+import { Units } from './../pages/units/units';
 import { NewListPage } from './../pages/newlist/newlist';
 import { ArmyPage } from './../pages/army/army';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +23,8 @@ import {ArmyBuilderService} from '../armybuilderservice';
     HomePage,
     ListPage,
     ArmyPage,
-    NewListPage
+    NewListPage,
+    Units
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import {ArmyBuilderService} from '../armybuilderservice';
     HomePage,
     ListPage,
     ArmyPage,
-    NewListPage
+    NewListPage,
+    Units
   ],
   providers: [
     StatusBar,
