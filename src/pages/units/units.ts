@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ArmyBuilderService } from './../../armybuilderservice';
-import { NavController, AlertController, NavParams } from 'ionic-angular';
+import { ViewController,NavController, AlertController, NavParams } from 'ionic-angular';
 
 
 
@@ -9,7 +9,7 @@ import { NavController, AlertController, NavParams } from 'ionic-angular';
     templateUrl: 'units.html'
   })
   export class Units{
-    constructor(public navCtrl: NavController,public _aBService:ArmyBuilderService, public paramsNav: NavParams) {    
+    constructor(public _viewCtrl: ViewController, public navCtrl: NavController,public _aBService:ArmyBuilderService, public paramsNav: NavParams) {    
     this.abService = _aBService;
     var faction = paramsNav.get("currentFaction");
     var warRole = paramsNav.get("role");
@@ -29,10 +29,10 @@ GetIndexUnits(currentFaction: any,role: number) {
       );
     }
 goback(){
-    this.navCtrl.pop();
+   this._viewCtrl.dismiss();
 }
 updateTotal(unitToAdd:any){
 var newunit = {id: unitToAdd.id, name: unitToAdd.name, point: unitToAdd.point}
-this.navCtrl.pop(newunit);
+this._viewCtrl.dismiss(newunit);
 }
 }

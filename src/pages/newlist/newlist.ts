@@ -1,7 +1,7 @@
 import { Units } from './../units/units';
 import { Component } from '@angular/core';
 import { ArmyBuilderService } from './../../armybuilderservice';
-import { NavController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, ModalController, NavParams } from 'ionic-angular';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { NavController, AlertController, NavParams } from 'ionic-angular';
     templateUrl: 'newlist.html'
   })
   export class NewListPage{
-    constructor(public navCtrl: NavController,public _aBService:ArmyBuilderService, public _navParams: NavParams) {    
+    constructor(public mdlCtrl: ModalController,public navCtrl: NavController,public _aBService:ArmyBuilderService, public _navParams: NavParams) {    
     this.abService = _aBService;
     this.unitParams = _navParams;
     }
@@ -20,7 +20,12 @@ import { NavController, AlertController, NavParams } from 'ionic-angular';
     goToUnits(role: number)
     {
         var payload = {currentFaction: this.currentFaction, role: role};
-        this.navCtrl.push(Units,payload);
+        let units = this.mdlCtrl.create(Units,payload);
+        units.onDidDismiss(dataToAdd => {
+          console.log(dataToAdd);
+        });
+        units.present();
+
     }
     ionViewWillEnter()
     {
