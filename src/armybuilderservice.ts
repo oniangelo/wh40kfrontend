@@ -10,9 +10,9 @@ export class ArmyBuilderService
     }
     
     getIndex(factionId: number,roleId?: number):Promise<any> {
-        return this.http.get('http://localhost:3000/api/getArmyIndex/'+factionId+'/role/'+roleId).toPromise();
+        //return this.http.get('http://localhost:3000/api/getArmyIndex/'+factionId+'/role/'+roleId).toPromise();
        
-        // return this.http.get('https://wh40kapi.herokuapp.com/api/getArmyIndex/'+factionId+'/role/'+roleId).toPromise();
+         return this.http.get('https://wh40kapi.herokuapp.com/api/getArmyIndex/'+factionId+'/role/'+roleId).toPromise();
     }        
     pointCounter: number = 0;
 }

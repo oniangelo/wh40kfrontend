@@ -21,17 +21,14 @@ import { NavController, ModalController, NavParams } from 'ionic-angular';
     {
         var payload = {currentFaction: this.currentFaction, role: role};
         let units = this.mdlCtrl.create(Units,payload);
-        units.onDidDismiss(dataToAdd => {
-          console.log(dataToAdd);
+        units.onDidDismiss(dataToAdd => {       
+          if(dataToAdd != null)
+          this.itemList.push(dataToAdd);
         });
         units.present();
 
     }
-    ionViewWillEnter()
-    {
-      var item = this._navParams.get("newunit");
-      debugger;
-      if(item != null)
-      this.itemList.push(item);
-    }
+    filterItemsOfType(type){
+      return this.itemList.filter(x => x.roleId == type);
+  }
   }
