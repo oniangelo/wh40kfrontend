@@ -1,6 +1,7 @@
 import { Units } from './../pages/units/units';
 import { NewListPage } from './../pages/newlist/newlist';
 import { ArmyPage } from './../pages/army/army';
+import { Factions } from './../pages/factions/factions';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
@@ -24,7 +25,8 @@ import {ArmyBuilderService} from '../armybuilderservice';
     ListPage,
     ArmyPage,
     NewListPage,
-    Units
+    Units,
+    Factions
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {ArmyBuilderService} from '../armybuilderservice';
     ListPage,
     ArmyPage,
     NewListPage,
-    Units
+    Units,
+    Factions
   ],
   providers: [
     StatusBar,

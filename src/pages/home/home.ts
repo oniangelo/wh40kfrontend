@@ -1,3 +1,4 @@
+import { Factions } from './../factions/factions';
 import { NewListPage } from './../newlist/newlist';
 import { FileSystem, FileReader, File } from '@ionic-native/file';
 import { Component } from '@angular/core';
@@ -16,7 +17,7 @@ export class HomePage{
   
   }
   newArmyList() {
-    this.navCtrl.push(NewListPage);
+    this.navCtrl.push(Factions);
   } 
 }
 // export class HomePage {

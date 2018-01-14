@@ -12,6 +12,7 @@ import { NavController, ModalController, NavParams } from 'ionic-angular';
     constructor(public mdlCtrl: ModalController,public navCtrl: NavController,public _aBService:ArmyBuilderService, public _navParams: NavParams) {    
     this.abService = _aBService;
     this.unitParams = _navParams;
+    console.log(this.unitParams);
     }
     abService: ArmyBuilderService;
     itemList = [];
